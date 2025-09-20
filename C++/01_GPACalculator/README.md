@@ -30,7 +30,7 @@ g++ -std=c++17 -o gpa main.cpp && ./gpa
 
 ✨ Why It Wins
 ✔️ Auto-weightage — Theory (75%) + Lab (25%) or 100%
-✔️ Input guardrails — No invalid entries. Ever.
+✔️ Input guardrails — No incorrect entries. Ever.
 ✔️ Multi-subject loop — PF → ICT → Physics → Done
 ✔️ Zero dependencies — Runs anywhere. Even your cousin’s 2009 laptop.
 ✔️ Instant clarity — See contribution % per quiz/exam/lab
