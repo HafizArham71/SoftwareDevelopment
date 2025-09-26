@@ -1,6 +1,6 @@
 public class Deck{
 	
-	Card cards[];
+	Card cards[];	
 	public Deck(){
 		cards=new Card[52];
 	}
