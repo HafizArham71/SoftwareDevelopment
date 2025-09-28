@@ -4,12 +4,15 @@ public enum Rank{
 	private String name;
 	private int number;
 
-	public Rank(String cardName, int cardNumber){
+	Rank(String cardName, int cardNumber){
 		name = cardName;
 		number = cardNumber;
 	}
 
 	public int getNumber(){
 		return number;
+	}
+	public String getName(){
+		return name;
 	}
 }

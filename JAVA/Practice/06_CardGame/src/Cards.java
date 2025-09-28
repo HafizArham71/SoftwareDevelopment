@@ -2,9 +2,9 @@ public class Cards{
 
 	// Attributes
 	private String suitName;
-	private int cardNumber;
+	private String cardNumber;
 
-	public Cards(String suitName, int cardNumber){
+	public Cards(String suitName, String cardNumber){
 		this.suitName = suitName;
 		this.cardNumber = cardNumber;
 	}
@@ -13,8 +13,14 @@ public class Cards{
 	public String getSuitName(){
 		return suitName;
 	}
-	public int getCardNumber(){
+	public String getCardNumber(){
 		return cardNumber;
+	}
+
+	// toString
+	@Override
+	public String toString(){
+		return String.format("%s of %s", cardNumber, suitName);
 	}
 
 }

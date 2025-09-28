@@ -1,9 +1,9 @@
 public enum Suit{
-	SPADES("S"), DIAMONDS("D"), HEART("H"), CLUB("C");
+	SPADES("Spade"), DIAMONDS("Diamond"), HEART("Heart"), CLUB("Club");
 
 	private String name;
 
-	public Suit(String name){
+	Suit(String name){
 		this.name = name;
 	}
 

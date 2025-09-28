@@ -1,14 +1,16 @@
 public class Deck{
 
+	private static int counter = 0;
+
 	Cards card[];
 	public Deck(){
 		card = new Cards[52];
 		Suit suit[] = Suit.values();
 		Rank rank[] = Rank.values();
 
-		for(Suit s: suit)
-			for(Rank r: rank)
-				card = new Cards(suit[s], rank[r]);
+		for(int i=0; i<suit.length; i++)
+			for(int j=0; j<rank.length; j++)
+				card[counter++] = new Cards(suit[i].getName(), rank[j].getName());
 	}
 	
 	public void display(){
