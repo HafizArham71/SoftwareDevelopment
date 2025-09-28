@@ -16,6 +16,8 @@ public class Deck{
 	public void display(){
 		for(int i=0; i<52; i++){
 			System.out.println(card[i]);
+			if(i==12 || i==25 || i==38)
+				System.out.print("\n");
 		}
 	}
 }
