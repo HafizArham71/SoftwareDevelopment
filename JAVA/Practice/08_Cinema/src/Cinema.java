@@ -11,7 +11,7 @@ public class Cinema{
 		screen = new Screen[noOfScreens];
 
 		for(int i=0; i<screen.length; i++){
-			screen[i] = new Screen();
+			screen[i] = new Screen("Screen " + (i+1), 10);
 		}
 		
 	}
@@ -22,7 +22,7 @@ public class Cinema{
 		str.append(cinemaName);
 
 		for(int i=0; i<noOfScreens; i++){
-			str.append("\n   Screen " + (i+1));
+			str.append("\n   " + screen[i]);
 		}
 
 		return str.toString();
