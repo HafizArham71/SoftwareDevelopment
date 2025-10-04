@@ -1,4 +1,4 @@
 public enum SeatType{
 
-	REGULAR, PREMIUM, VIP, RECTILINE;
+	REGULAR, PREMIUM, VIP, RECLINER;
 }
