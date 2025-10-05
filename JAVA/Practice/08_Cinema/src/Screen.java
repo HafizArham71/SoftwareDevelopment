@@ -1,23 +1,27 @@
 public class Screen{
-	
+
 	// Attributes
-	String screenName;
-	int rows;
-	String seat[][];
+	private String screenName;
+	private int noOfRows;
 
-	public Screen(String screenName, int rows){
+	Seat seat[][];
+
+	// Constructor
+	public Screen(String screenName, int noOfRows){
 		this.screenName = screenName;
-		this.rows = rows;
-		seat = new String[rows][];
+		this.noOfRows = noOfRows;
 
-		for(int i=0; i<seat.length; i++)
-			seat[i] = new seat[rows + i];
+		seat = new Seat[noOfRows][];
+
+		for(int i=0; i<noOfRows; i++)
+			seat[i] = new Seat[noOfRows+i];
 
 		for(int j=0; j<seat.length; j++){
-			for(int k=0; k<seat[j].length; j++)
-			{
-				seat[j][k] = new seat(j, k, 500);
+			for(int k=0; k<seat[j].length; k++){
+				seat[j][k]=new Seat(j, k, 500);
 			}
 		}
 	}
+
+
 }

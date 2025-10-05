@@ -1,2 +1,2 @@
 javac -d out src/*.java
-javac -d . -cp out;. Demo.java
+javac -d . -cp .;out ScreenDemo.java

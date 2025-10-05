@@ -1,1 +1,1 @@
-java -cp out;. Demo
+java -cp .;out ScreenDemo
