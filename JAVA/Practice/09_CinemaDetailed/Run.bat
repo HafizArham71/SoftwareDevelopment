@@ -1,1 +1,1 @@
-java -cp .;out SeatDemo ScreenDemo
+java -cp .;out ScreenDemo

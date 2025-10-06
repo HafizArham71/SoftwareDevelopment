@@ -12,8 +12,8 @@ public class Seat {
 	// Constructors
 	public Seat(){
 		this.seatType = seatType.REGULAR;
-		this.price = 0.0;
-		this.id = "0-000";
+		this.price = 500.0;
+		this.id = "8-001";
 		this.isAvailable = true;
 	}
 	
