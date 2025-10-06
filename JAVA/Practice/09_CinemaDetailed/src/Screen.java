@@ -40,6 +40,12 @@ public class Screen{
 	public String toString(){
 		StringBuilder str = new StringBuilder();
 		str.append(screenName);
+
+		for(int i=0; i<seat.length; i++){
+			for(int j=0; j<seat[i].length; j++){
+				new
+			}
+		}
 	}
 
 }
