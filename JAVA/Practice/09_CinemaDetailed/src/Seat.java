@@ -6,9 +6,6 @@ public class Seat {
 	private String id;
 	private boolean isAvailable;
 
-	private int row;
-	private int col;
-
 	// Constructors
 	public Seat(){
 		this.seatType = seatType.REGULAR;
@@ -18,8 +15,6 @@ public class Seat {
 	}
 	
 	public Seat(int row, int col, SeatType seatType, double price){
-		this.row = row;
-		this.col = col;
 		this.id = String.format("%d-%03d", row, col);
 		this.seatType = seatType;
 		this.price = price;
@@ -57,9 +52,7 @@ public class Seat {
 	}
 
 	public boolean isAvailable(){
-		if(isAvailable)
-			return true;
-		return false;
+		return isAvailable;
 	}
 
 	public boolean cancelBooking(){

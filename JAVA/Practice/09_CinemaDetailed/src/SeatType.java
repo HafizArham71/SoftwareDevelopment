@@ -10,4 +10,16 @@ public enum SeatType{
 	public double getPrice(){
 		return price;
 	}
+
+	@Override
+	public String toString(){
+		if(price==500)
+			return "REGULAR";
+		else if(price == 750)
+			return "PREMIUM";
+		else if(price == 1000)
+			return "VIP";
+		else
+			return "RECLINER";
+	}
 }
