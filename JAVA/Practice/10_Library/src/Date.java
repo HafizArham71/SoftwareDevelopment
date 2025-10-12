@@ -5,6 +5,7 @@ public class Date{
 	private String month;
 	private int year;
 
+	// Constructors
 	public Date(Date date){
 		this.date = date.date;
 		this.month = date.month;
