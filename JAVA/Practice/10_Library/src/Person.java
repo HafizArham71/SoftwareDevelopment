@@ -14,8 +14,28 @@ public class Person{
 
 	public Person(Person person){
 		this.name = new String(person.name);
-		this.gender = new String("Not Mentioned");
-		this.address = new String("NO Address");
+		this.gender = new String(person.gender);
+		this.address = new String(person.address);
+	}
+
+	public String getName(){
+		return name;
+	}
+	public String getGender(){
+		return gender;
+	}
+	public String getAddress(){
+		return address;
+	}
+
+	public void setName(String name){
+		this.name = name;
+	}
+	public void setGender(String gender){
+		this.gender = gender;
+	}
+	public void setAddress(String address){
+		this.address = address;
 	}
 
 	@Override
