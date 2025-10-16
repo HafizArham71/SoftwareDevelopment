@@ -12,5 +12,11 @@ public class LibraryTest{
 		System.out.println(book2);
 		System.out.println(book3);
 		System.out.println(book4);
+
+		System.out.println("\n" + book.equals(book1));
+		System.out.println(book1.equals(book2));
+		System.out.println(book2.equals(book3));
+		System.out.println(book3.equals(book4));
+
 	}
 }
