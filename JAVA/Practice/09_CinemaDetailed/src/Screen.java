@@ -35,7 +35,7 @@ public class Screen{
 		this.screenName = "No Name";
 	}
 
-	public Screen(String screenName, ){
+	public Screen(String screenName){
 		this.PRICE_REGULAR = SeatType.REGULAR.getPrice();
 		this.PRICE_PREMIUM = SeatType.PREMIUM.getPrice();
 		this.PRICE_VIP = SeatType.VIP.getPrice();

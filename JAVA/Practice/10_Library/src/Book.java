@@ -1,8 +1,6 @@
 public class Book{
 
-	// ============================
-	// Attributes
-	// ============================
+	// Attributes 
 	private String bookId;
 	private String title;
 	private Person author;
