@@ -13,6 +13,7 @@ public class Screen{
 	private String screenName;
 
 
+
 	// Constructors
 
 	public Screen(){
@@ -42,6 +43,13 @@ public class Screen{
 
 	// Method
 
+	public boolean cancel(int row, int column){
+		if(seats[row][column].isAvailable())
+			return false;
+		seats[row][column].setAvailable(true);
+		return true;
+	}
+
 	public static int[] defaultRowLength(int arrayLength){
 		int[] rowArr = new int[arrayLength];
 
@@ -53,14 +61,30 @@ public class Screen{
 	}
 
 	public void materializeGrid(int i, int j, int length){
-		if((i+1)<(length*0.40))
+		
+		int front_rows, middle_rows, penultimate_rows, last_rows;
+		
+		if(length%2==0){ // 10
+			front_rows = length/2; // less than 3
+			middle_rows = front_rows+1; // less than or equals to 4
+			penultimate_rows = middle_rows + (length - middle_rows - 1); // less than or equals to
+			last_rows = length; // last row 
+		}
+		else{ // 11
+			front_rows = (length+1)/2; // less than 6
+			middle_rows = front_rows; // less than or equals to 6
+			penultimate_rows = middle_rows + (length - middle_rows - 1); // less than or equals to 10
+			last_rows = length; // last row 11
+		}
+
+		if((i+1)<front_rows)
 			seats[i][j] = new Seat(i, j, SeatType.REGULAR, PRICE_REGULAR);
-		else if((i+1)<(length*0.30))
-			seats[i][j] = new Seat(i, j, SeatType.PREMIUM, PRICE_PREMIUM);
-		else if((i+1)<(length*0.2))
+		else if((i+1)<=middle_rows)
+			seats[i][j] = new Seat(i, j, SeatType.PREMIUM, PRICE_PREMIUM);	
+		else if((i+1)<=penultimate_rows)
 			seats[i][j] = new Seat(i, j, SeatType.VIP, PRICE_VIP);
 		else
-			seats[i][j] = new Seat(i, j, SeatType.RECLINER, PRICE_RECLINER);
+			seats[i][j] = new Seat(i, j, SeatType.RECLINER, PRICE_RECLINER);	
 	}
 
 	@Override
