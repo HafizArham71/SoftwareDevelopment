@@ -1,0 +1,1 @@
+javac -d . -cp .;out Demo.java

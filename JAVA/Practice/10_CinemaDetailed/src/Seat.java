@@ -1,3 +1,5 @@
+// DONE
+
 public class Seat{
 
 	// Attributes
