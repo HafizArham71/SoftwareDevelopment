@@ -93,6 +93,10 @@ public class Screen{
 		return screenName;
 	}
 
+	public void setScreenName(String name){ // 1
+		this.screenName = name;
+	}
+
 	public Seat getSeat(String id){
 		
 		if(id == null)	return null;

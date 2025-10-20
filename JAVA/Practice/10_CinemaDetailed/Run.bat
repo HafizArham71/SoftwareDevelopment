@@ -1,1 +1,1 @@
-java -cp out;. ScreenTest
+java -cp out;. Demo
