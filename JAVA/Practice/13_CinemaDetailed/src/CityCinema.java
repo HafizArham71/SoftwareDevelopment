@@ -12,7 +12,7 @@ public class CityCinema{
 
 	public CityCinema(){
 
-		this("Karachi");
+		this("No Name");
 
 	}
 
@@ -45,6 +45,12 @@ public class CityCinema{
 
 
 	// Methods
+
+	/*public void displayCompactLayout(){
+
+		for()
+
+	}*/
 
 	public String findFirstAvailableVIPSeat(){
 
@@ -166,6 +172,76 @@ public class CityCinema{
 		return false;
 
 	}
+
+	public void preloadCity(){
+
+		int logicalSize;
+
+		if (cityName.equalsIgnoreCase("Karachi")) {
+        		cinemas = new Cinema[2];
+        		cinemas[0] = new Cinema("Atrium Saddar", 2);
+        		cinemas[1] = new Cinema("Nueplex DHA", 2);
+        		logicalSize = 2;
+    		}
+    		
+		else if (cityName.equalsIgnoreCase("Lahore")) {
+        		cinemas = new Cinema[2];
+        		cinemas[0] = new Cinema("CineStar Township", 2);
+        		cinemas[1] = new Cinema("CineStar Gulberg", 2);
+        		logicalSize = 2;
+    		}
+    		else if (cityName.equalsIgnoreCase("Islamabad")) {
+        		cinemas = new Cinema[1];
+        		cinemas[0] = new Cinema("Centaurus Megaplex", 3);
+        		logicalSize = 1;
+    		}
+		else{
+
+			logicalSize = 5;
+
+			cinemas = new Cinema[logicalSize];
+
+			for(int i=0; i<logicalSize; i++){
+
+				cinemas[i] = new Cinema("Cinema-" + i);
+			
+				Screen screens[] = new Screen[2];
+
+				for(int j=0; j<screens.length; j++){
+
+					screens[j] = new Screen("Screen-" + j); 
+
+				}
+
+			}
+			
+
+
+		}
+
+		
+
+	}
+
+
+	public void displayCitySummary() {
+
+		int logicalSize = 5;
+    		
+		System.out.println("City Summary:");
+   		System.out.println("----------------------------");
+    		
+		for (int i = 0; i < logicalSize; i++) {
+        		Cinema c = cinemas[i];
+        		System.out.println("Cinema " + (i + 1) + ": " + c.getCinemaName());
+        		System.out.println("  Screens: " + c.getScreens().length);
+        		System.out.println("  Total Seats: " + c.getTotalSeats());
+        		System.out.println("  VIP Seats: ");				// temporary
+        		System.out.println();
+   		}
+		
+	}
+
 
 
 	@Override
