@@ -203,15 +203,7 @@ public class CityCinema{
 
 			for(int i=0; i<logicalSize; i++){
 
-				cinemas[i] = new Cinema("Cinema-" + i);
-			
-				Screen screens[] = new Screen[2];
-
-				for(int j=0; j<screens.length; j++){
-
-					screens[j] = new Screen("Screen-" + j); 
-
-				}
+				cinemas[i] = new Cinema("Cinema-" + i, 5);
 
 			}
 			
