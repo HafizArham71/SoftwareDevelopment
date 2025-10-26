@@ -1,103 +1,172 @@
 public class Cinema{
 
-
-
+	
 	// Attributes
 
-	private String screenName;
-	private Screen[] screen;
-	private int numScreens;
+	private String cinemaName;
+	static final int DEFAULT_NUM_SCREENS = 10;
+	private Screen screens[];
 
-	public static int defaultNoOfScreens = 4;
-
-
+	
 	
 	// Constructors
 
 	public Cinema(){
+
+		this("Untitled Cinema");
+
+	}
+
+	public Cinema(String cinemaName){
+
+		this(cinemaName, DEFAULT_NUM_SCREENS);
+
+	}
+
+	public Cinema(String cinemaName, int noOfScreens){
+
+		this.cinemaName = cinemaName;
+
+
+		screens = new Screen[noOfScreens];
+
+
+		for(int i=0; i<screens.length; i++){
 		
-		this("No Name");
-	
+			screens[i] = new Screen("Screen-" + (i+1));
+		}
+
 	}
 
+
+
+	// Method
+
+	public int getScreensCount(){
+
+		return screens.length;
+
+	}
+
+	public Screen[] getScreens(){
+
+		return screens;
+
+	}
+
+
+	public void addScreen(String screenName){
+
+		Screen updatedScreens[] = new Screen[screens.length+1];
 		
-	public Cinema(String name){
+		for(int i=0; i<screens.length; i++){
 
-		this(name, defaultNoOfScreens);	
+			updatedScreens[i] = screens[i];
 
-	}
+		}
 
-	
-	public Cinema(String name, int numScreens){
+		updatedScreens[screens.length] = new Screen(screenName);
 
-		this.screenName = name;
-		this.screen = new Screen[numScreens];	
-		this.numScreens = numScreens;
-
-		screen = new Screen[numScreens];
-
-		for(int i=0; i<numScreens; i++){
-			screen[i] = new Screen("Screen " + (i+1));
-		}	
+		screens = updatedScreens;
 
 	}
 
-	
+	public Screen findScreenByName(String screenName){
 
-	// Methods
+		for(Screen s: screens){
 
-	public Screen getScreenByName(String screenName){
-		for(Screen s: screen){
-			if(s.equals(screenName))
+			if(s.getScreenName().equals(screenName))
 				return s;
+
 		}
 
 		return null;
+
 	}
 
 
-	public Screen getScreenByIndex(int indx){
-		if(indx<0 || indx >=screen.length)
-			throw new IndexOutOfBoundsException("No Screen Found with the index");
-		return screen[indx];
+	public Screen findScreenByIndex(int index){
+
+		return screens[index];
+
 	}
 
-	public void addScreen(String screenName, int index){
-		if(index < 0 || index >= screen.length)
-			throw new IndexOutOfBoundsException("Out of screen length.");
+	
+	public boolean bookSeat(String screenName, String seatId){
 
-		screen[index].setScreenName(screenName);
+		for(Screen s: screens){
+
+			if(screenName!=null && s.getScreenName().equals(screenName) && seatId!=null)
+				return s.book(seatId);
+
+		}
+
+		return false;
+
 	}
 
-	public int totalSeatsInCinema(){
+	public boolean cancelSeat(String screenName, String seatId){
+
+		for(Screen s: screens){
+
+			if(screenName!=null && s.getScreenName().equals(screenName) && seatId!=null)
+				return s.cancel(seatId);
+
+		}
+
+		return false;
+
+	}
+
+	public int getTotalSeats(){
+
 		int total = 0;
 
-		for(Screen s: screen){
-			total += s.getTotalSeatCount();
+		for(Screen s: screens){
+
+			total+=s.getTotalSeatsCount();
+
 		}
 
 		return total;
+
 	}
 
-	public int availableSeatsInCinema(){
+	public int getAvailableSeats(){
+
 		int available = 0;
 
-		for(Screen s: screen){
-			available += s.getAvailableSeatCount();
+		for(Screen s: screens){
+
+			available+=s.getAvailableSeatCount();
+
 		}
 
 		return available;
-	}	
 
-    	public void displayAllScreens() {
+	}
+
+	public void printReport(){
+
+		for(Screen s: screens){
+
+			s.displayVerbose();
+
+		}
+
+	}
+
+	public String getCinemaName(){
+
+		return cinemaName;
+	}
+
+	
 		
-        	System.out.println("=== Cinema: " + screenName + " ===");
-        	
-		for (Screen s : screen) {
-          		System.out.println("- " + s.getScreenName() + 
-                	" | Total Seats: " + s.getTotalSeatCount() +
-                	" | Available: " + s.getAvailableSeatCount());
-        	}
-    }	
 
+	@Override 
+	public String toString(){
+
+		return String.format("Cinema Name: %s, No Of Screens: %d, Total Seats: %d, Available Seats: %d", cinemaName, screens.length, getTotalSeats(), getAvailableSeats());
+	}
 }

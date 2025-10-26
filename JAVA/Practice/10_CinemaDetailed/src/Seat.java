@@ -1,89 +1,115 @@
-// DONE
-
 public class Seat{
 
-	// Attributes
 	
+	// Attributes
+
+	private SeatType seatType;
 	private double price;
 	private String id;
-	private SeatType seatType;
 	private boolean isAvailable;
 
-	
-	
+
 	// Constructors
 
 	public Seat(int row, int col, SeatType seatType, double price){
-		this.price = price;
-		this.id = String.format("%d-%03d", row, col);
+	
 		this.seatType = seatType;
+		this.id = String.format("%d-%03d", row, col);
+		this.price = price;
 		this.isAvailable = true;
+	
 	}
 
 	public Seat(){
-		this.price = 300;
+
 		this.id = "0-001";
-		this.seatType = SeatType.REGULAR; // Method 1
-		this.isAvailable = true;
-		//this.seatType = SeatType.values()[0];  // Method 2
+		this.price = price;
+		this.isAvailable = isAvailable;
+		this.seatType = SeatType.REGULAR;
 	}
 
-
-
-	// Methods
 	
+	// Methods
+
 	public String getId(){
+		
 		return id;
+		
 	}
 
-	public double getPrice(){
-		return price;
+	public void setId(int row, int col){
+
+		this.id = String.format("%d-%03d", row, col);
+	
 	}
 
 	public SeatType getSeatType(){
+
 		return seatType;
-	}
 
-	public boolean isAvailable(){
-		return isAvailable;
-	}
-
-
-	public void setId(int row, int col){
-		this.id = String.format("%d-%03d", row, col);
-	}
-
-	public void setPrice(double price){
-		this.price = price;
 	}
 
 	public void setSeatType(SeatType seatType){
-		this.seatType = seatType;
+
+		this.seatType = seatType;	
+
+	}
+
+	public boolean isAvailable(){
+
+		return isAvailable;
+
 	}
 
 	public void setAvailable(boolean isAvailable){
+
 		this.isAvailable = isAvailable;
+
 	}
 
+	public double getPrice(){
+
+		return price;
 	
+	}
+
+	public void setPrice(double price){
+
+		this.price = price;
+	
+	}
+
 	public boolean bookSeat(){
+
 		if(!isAvailable)
 			return false;
 		isAvailable = false;
 		return true;
+	
 	}
 
 	public boolean cancelBooking(){
+
 		if(isAvailable)
 			return false;
+
 		isAvailable = true;
-		return true;
+		return true;	
+	
 	}
 
 
-	@Override 
+	@Override
 	public String toString(){
-		String output = String.format("[%s : %.2f : %s : %b]", id, price, seatType, isAvailable);
-		return output;
+
+		return String.format("[%s, %.2f, %s, %b]", id, price, seatType, isAvailable);
+
 	}
+}
+
+
+enum SeatType{
+	
+	REGULAR, PREMIUM, VIP, RECLINER;
+
 }
