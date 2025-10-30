@@ -50,6 +50,8 @@ public class CornerPlot extends Plot{
 
 }
 
+
+
 /*
 
 To demonstrate inheritance without abstract classes, include a concrete CornerPlot as a subclass of Plot that adds a second road frontage (two widths) and applies a corner premium—for example, +8% over the base price. Preload each block with a mix of regular and corner plots so the premium naturally appears in printed results.

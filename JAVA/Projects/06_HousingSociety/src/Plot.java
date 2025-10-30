@@ -6,9 +6,8 @@ public class Plot{
 
 	private String id;		// like 3-007
 	private boolean isAvailable;
-
-	private PlotType plotType;
 	protected Shape shape;
+	private PlotType plotType;
 	protected ShapeType shapeType;
 
 
@@ -86,6 +85,20 @@ public class Plot{
 
 	}
 
+	public Shape getShape(){
+
+		return shape;
+
+	}
+
+	public ShapeType getShapeType(){
+
+		return shapeType;
+
+	}
+
+
+
 	public void setId(int row, int col){
 
 		this.id = String.format("%d-%03d", row, col);
@@ -104,7 +117,21 @@ public class Plot{
 
 	}
 
-	public boolean book(){
+	public void setShape(Shape shape){
+
+		this.shape = shape;
+
+	}
+
+	public void setShapeType(ShapeType shapeType){
+
+		this.shapeType = shapeType;
+
+	}
+
+
+
+	public boolean bookPlot(){
 
 		if(isAvailable){
 
@@ -118,7 +145,7 @@ public class Plot{
 
 	}
 
-	public boolean cancel(){
+	public boolean cancelPlotBooking(){
 
 		if(!isAvailable){
 
@@ -133,10 +160,13 @@ public class Plot{
 	}
 
 
+	
+
+
 	@Override
 	public String toString(){
 
-		String str = String.format("[ PlotId: %s, PlotType: %s, Shape: %s Area: %.2f, square-unit, Price: %,.2f PKR, Availability: %b ]", id, plotType, shapeType, shape.getArea(), plotType.getPrice(), isAvailable);
+		String str = String.format("[ PlotId: %s, PlotType: %s, Shape: %s, Area: %.2f square-unit, Price: %,.2f PKR, Availability: %b ]", id, plotType, shapeType, shape.getArea(), plotType.getPrice(), isAvailable);
 
 		return str;
 
