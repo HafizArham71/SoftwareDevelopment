@@ -1,0 +1,286 @@
+=========================================
+   EXCEPTION HANDLING IN JAVA - NOTES
+=========================================
+
+1. INTRODUCTION
+----------------
+Exceptions are unexpected or abnormal events that occur 
+during the execution of a program which disrupt the normal 
+flow of instructions.
+
+Example:
+    int x = 10 / 0;   // ArithmeticException occurs
+
+Without handling, this will crash the program. 
+Exception handling prevents the program from terminating 
+abruptly and allows graceful recovery.
+
+------------------------------------------
+
+2. WHY USE EXCEPTION HANDLING?
+--------------------------------
+- To maintain normal flow of the program
+- To handle runtime errors safely
+- To provide meaningful error messages to the user
+- To separate error-handling code from normal code
+
+------------------------------------------
+
+3. TYPES OF EXCEPTIONS
+--------------------------------
+Java divides exceptions into two main categories:
+
+(1) Checked Exceptions:
+    - Checked at compile time.
+    - Must be either handled using try-catch 
+      or declared using "throws" keyword.
+    - Examples:
+          IOException
+          SQLException
+          FileNotFoundException
+
+(2) Unchecked Exceptions:
+    - Occur at runtime (not checked at compile time).
+    - Examples:
+          ArithmeticException
+          NullPointerException
+          ArrayIndexOutOfBoundsException
+          NumberFormatException
+
+(3) Errors (not Exceptions):
+    - Serious problems beyond program control.
+    - Example: OutOfMemoryError, StackOverflowError
+
+------------------------------------------
+
+4. EXCEPTION CLASS HIERARCHY
+--------------------------------
+                Object
+                   |
+                Throwable
+               /         \
+           Exception      Error
+             |
+       -----------------
+       |               |
+   Checked         Unchecked
+
+------------------------------------------
+
+5. KEYWORDS USED IN EXCEPTION HANDLING
+------------------------------------------
+
+try       : Block of code that may cause an exception
+catch     : Block that handles the exception
+finally   : Block that executes always (cleanup code)
+throw     : Used to throw an exception explicitly
+throws    : Declares which exceptions a method may throw
+
+------------------------------------------
+
+6. BASIC SYNTAX
+------------------------------------------
+try {
+    // Code that might throw an exception
+}
+catch (ExceptionType e) {
+    // Code to handle the exception
+}
+finally {
+    // Always executed, even if exception occurs
+}
+
+------------------------------------------
+
+7. EXAMPLE 1: BASIC TRY-CATCH
+------------------------------------------
+public class Example1 {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0;
+            System.out.println(result);
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero!");
+        }
+
+        System.out.println("Program continues normally...");
+    }
+}
+
+Output:
+    Cannot divide by zero!
+    Program continues normally...
+
+------------------------------------------
+
+8. EXAMPLE 2: MULTIPLE CATCH BLOCKS
+------------------------------------------
+public class Example2 {
+    public static void main(String[] args) {
+        try {
+            int[] arr = {10, 20, 30};
+            System.out.println(arr[5]); // Invalid index
+        } catch (ArithmeticException e) {
+            System.out.println("Math error occurred!");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array index is out of range!");
+        } catch (Exception e) {
+            System.out.println("Some other error occurred!");
+        }
+    }
+}
+
+------------------------------------------
+
+9. EXAMPLE 3: FINALLY BLOCK
+------------------------------------------
+public class Example3 {
+    public static void main(String[] args) {
+        try {
+            int a = 5 / 0;
+        } catch (Exception e) {
+            System.out.println("Exception caught!");
+        } finally {
+            System.out.println("Finally block always executes.");
+        }
+    }
+}
+
+Output:
+    Exception caught!
+    Finally block always executes.
+
+------------------------------------------
+
+10. EXAMPLE 4: NESTED TRY BLOCKS
+------------------------------------------
+public class Example4 {
+    public static void main(String[] args) {
+        try {
+            try {
+                int num = 5 / 0;
+            } catch (ArithmeticException e) {
+                System.out.println("Inner catch block");
+            }
+            int[] arr = new int[3];
+            arr[5] = 100;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Outer catch block");
+        }
+    }
+}
+
+Output:
+    Inner catch block
+    Outer catch block
+
+------------------------------------------
+
+11. EXAMPLE 5: THROW KEYWORD
+------------------------------------------
+public class Example5 {
+    public static void main(String[] args) {
+        int age = 15;
+        if (age < 18) {
+            throw new ArithmeticException("Not eligible to vote");
+        } else {
+            System.out.println("Eligible to vote");
+        }
+    }
+}
+
+Output:
+    Exception in thread "main" java.lang.ArithmeticException: Not eligible to vote
+
+------------------------------------------
+
+12. EXAMPLE 6: THROWS KEYWORD
+------------------------------------------
+import java.io.*;
+
+public class Example6 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Enter your name: ");
+        String name = br.readLine();  // May throw IOException
+        System.out.println("Hello " + name);
+    }
+}
+
+------------------------------------------
+
+13. USER-DEFINED EXCEPTIONS
+------------------------------------------
+We can create our own exception classes by extending Exception or RuntimeException.
+
+Example:
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String msg) {
+        super(msg);
+    }
+}
+
+public class Example7 {
+    public static void checkAge(int age) throws InvalidAgeException {
+        if (age < 18)
+            throw new InvalidAgeException("Age must be 18 or above");
+        else
+            System.out.println("Valid age");
+    }
+
+    public static void main(String[] args) {
+        try {
+            checkAge(15);
+        } catch (InvalidAgeException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        }
+    }
+}
+
+Output:
+    Exception caught: Age must be 18 or above
+
+------------------------------------------
+
+14. BEST PRACTICES FOR TOP STUDENTS
+------------------------------------------
+1. Catch the most specific exceptions first.
+2. Avoid empty catch blocks.
+3. Always clean up resources in finally block or use try-with-resources.
+4. Do not use exceptions for normal control flow.
+5. Always log meaningful messages in catch blocks.
+6. Prefer custom exceptions for domain-specific errors.
+7. Use "throws" only when you want the caller to handle the exception.
+
+------------------------------------------
+
+15. TRY-WITH-RESOURCES (JAVA 7+)
+------------------------------------------
+Automatically closes resources like files or connections.
+
+Example:
+import java.io.*;
+
+public class Example8 {
+    public static void main(String[] args) {
+        try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null)
+                System.out.println(line);
+        } catch (IOException e) {
+            System.out.println("File error: " + e.getMessage());
+        }
+    }
+}
+
+------------------------------------------
+
+16. SUMMARY
+------------------------------------------
+- Exceptions help manage runtime errors safely.
+- Use try, catch, finally, throw, and throws keywords effectively.
+- Always handle exceptions properly to ensure robust, professional-quality code.
+
+------------------------------------------
+END OF NOTES
+=========================================
