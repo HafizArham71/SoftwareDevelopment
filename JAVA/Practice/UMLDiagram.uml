@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/ST/IdeaProjects/Shape</OriginalElement>
+  <nodes>
+    <node x="177.0" y="79.0">Shape2D</node>
+    <node x="531.0" y="432.0">Main</node>
+    <node x="-3.0" y="347.0">Shape3D</node>
+    <node x="-156.5" y="1023.0">Sphere</node>
+    <node x="75.5" y="-153.0">Shape</node>
+    <node x="367.5" y="1035.0">Circle</node>
+    <node x="174.5" y="715.0">Rectangle</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Rectangle" target="Shape2D" relationship="GENERALIZATION">
+      <point x="0.0" y="-141.0" />
+      <point x="331.0" y="676.0" />
+      <point x="511.0" y="676.0" />
+      <point x="511.0" y="56.0" />
+      <point x="331.0" y="56.0" />
+      <point x="0.0" y="-117.0" />
+    </edge>
+    <edge source="Shape3D" target="Shape" relationship="GENERALIZATION">
+      <point x="0.0" y="-129.0" />
+      <point x="0.0" y="69.0" />
+    </edge>
+    <edge source="Circle" target="Shape2D" relationship="GENERALIZATION">
+      <point x="0.0" y="-141.0" />
+      <point x="511.0" y="56.0" />
+      <point x="331.0" y="56.0" />
+      <point x="0.0" y="-117.0" />
+    </edge>
+    <edge source="Shape2D" target="Shape" relationship="GENERALIZATION">
+      <point x="0.0" y="-117.0" />
+      <point x="331.0" y="36.0" />
+      <point x="151.0" y="36.0" />
+      <point x="0.0" y="69.0" />
+    </edge>
+    <edge source="Sphere" target="Shape3D" relationship="GENERALIZATION">
+      <point x="0.0" y="-153.0" />
+      <point x="-9.0" y="996.0" />
+      <point x="-29.0" y="996.0" />
+      <point x="-29.0" y="316.0" />
+      <point x="151.0" y="316.0" />
+      <point x="0.0" y="-129.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.4507323568575233" showDependencies="false" x="249.0" y="588.0" />
+  <SelectedNodes>
+    <node>Sphere</node>
+    <node>Circle</node>
+    <node>Shape</node>
+    <node>Rectangle</node>
+    <node>Shape3D</node>
+    <node>Shape2D</node>
+    <node>Main</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
