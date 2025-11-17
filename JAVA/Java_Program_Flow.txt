@@ -1,0 +1,5 @@
+When the program starts, the JVM loads the class that contains main(), which is Test. While loading Test, the JVM executes all static variables and static blocks of Test in the order they appear. After class initialization completes, the JVM enters the main() method.
+
+Inside main(), when the JVM sees new B(), it needs to create a B object. Before creating the object, the JVM checks whether class B is already loaded. If not, the JVM loads the parent class first. During parent class loading, all static variables and static blocks of the parent class are executed once. After that, the JVM loads the child class B and executes its static variables and static blocks.
+
+Once both classes are loaded, the JVM starts the object creation process. It initializes the instance variables and instance initializer blocks of the parent class, then calls the parent constructor. After that, it initializes the instance variables and instance initializer blocks of the child class and finally calls the child constructor.
