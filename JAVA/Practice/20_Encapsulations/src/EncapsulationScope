@@ -1,0 +1,8 @@
+Encapsulation 	| Same_Class	Same_Package	Sub_Class(Same pkg)	Sub_Class(other pkg)	Other_Package
+-------------------------------------------------------------------------------------------------------------
+Private		| Yes		No		No			No			No
+Default		| Yes		Yes		Yes			No			No
+Protected	| Yes		Yes		Yes			Yes			No
+Public 		| Yes		Yes		Yes			Yes			Yes
+
+

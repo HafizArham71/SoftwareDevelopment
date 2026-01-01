@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1ab4444d-81ab-42e4-847b-75fd6e0bb8fe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../New folder/ContractEmployee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../New folder/ContractEmployee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../New folder/Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../New folder/Demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../New folder/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../New folder/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../New folder/Payable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../New folder/Payable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../New folder/RegularEmployee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../New folder/RegularEmployee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UMLDiagram.uml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;HafizArham71&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/HafizArham71/SoftwareDevelopment.git&quot;,
+    &quot;accountId&quot;: &quot;c7e3b324-8ac1-4fe5-807c-43913a9d8823&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="36km8DdxxP9Wc9cZGch6DW8T0Bb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Game.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Window.executor&quot;: &quot;Run&quot;,
+    &quot;Application.abc.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.example._2_pingponggame.GameUI.Game.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/02_Github/SoftwareDevelopment/JAVA/Practice/02_Ping-Pong-Game/src/main/java/com/example/_2_pingponggame/GameUI&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\02_Github\SoftwareDevelopment\JAVA\Practice\02_Ping-Pong-Game\src\main\java\com\example\_2_pingponggame\GameUI" />
+      <recent name="C:\02_Github\SoftwareDevelopment\JAVA\Practice\02_Ping-Pong-Game\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Window">
+    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Game_UI.Game" />
+      <module name="02_Ping-Pong-Game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Game_UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example._2_pingponggame.HelloApplication" />
+      <module name="02_Ping-Pong-Game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example._2_pingponggame.GameUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example._2_pingponggame.Launcher" />
+      <module name="02_Ping-Pong-Game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example._2_pingponggame.GameUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Window" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example._2_pingponggame.GameUI.Window" />
+      <module name="02_Ping-Pong-Game" />
+      <option name="VM_PARAMETERS" value="--enable-native-access=javafx.graphics " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example._2_pingponggame.GameUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="abc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example._2_pingponggame.GameUI.abc" />
+      <module name="02_Ping-Pong-Game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example._2_pingponggame.GameUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.abc" />
+      <item itemvalue="Application.Game" />
+      <item itemvalue="Application.HelloApplication" />
+      <item itemvalue="Application.Launcher" />
+      <item itemvalue="Application.Window" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Window" />
+        <item itemvalue="Application.abc" />
+        <item itemvalue="Application.Launcher" />
+        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.Game" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ab4444d-81ab-42e4-847b-75fd6e0bb8fe" name="Changes" comment="" />
+      <created>1765558787424</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765558787424</updated>
+      <workItem from="1765558788774" duration="18256000" />
+      <workItem from="1765616842667" duration="6731000" />
+      <workItem from="1766003745136" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

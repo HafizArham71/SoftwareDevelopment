@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1760256094 source:c:\02_github\softwaredevelopment\c++\01_studentrecordmanagement\main.cpp
+	<iostream>
+	<cctype>
+	<string>
+	<fstream>
+	<stdexcept>
+	<sstream>
+	<iomanip>
+	<algorithm>
+
