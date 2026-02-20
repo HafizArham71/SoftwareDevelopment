@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1760256094 source:c:\02_github\softwaredevelopment\c++\03_studentmarksanalyzer\main.cpp
+	<iostream>
+	<iomanip>
+

@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ab4444d-81ab-42e4-847b-75fd6e0bb8fe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../New folder/ContractEmployee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../New folder/ContractEmployee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../New folder/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../New folder/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../New folder/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../New folder/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../New folder/Payable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../New folder/Payable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../New folder/RegularEmployee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../New folder/RegularEmployee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Shape.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UMLDiagram.uml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +59,7 @@
     &quot;Application.com.example._2_pingponggame.GameUI.Game.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -194,6 +184,9 @@
       <workItem from="1765558788774" duration="18256000" />
       <workItem from="1765616842667" duration="6731000" />
       <workItem from="1766003745136" duration="16000" />
+      <workItem from="1767274627410" duration="52000" />
+      <workItem from="1770695577517" duration="190000" />
+      <workItem from="1770695785046" duration="84000" />
     </task>
     <servers />
   </component>

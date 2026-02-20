@@ -1,0 +1,17 @@
+.scene {
+    -fx-background-color: #abcdef;
+}
+
+.button {
+    -fx-background-radius: 16px;
+    -fx-background-color: #2D82B7;
+    -fx-padding: 16px, 32px;
+    -fx-font-family: 'Inter';
+    -fx-font-weight: normal;
+    -fx-text-fill: #F2FDFF;
+    -fx-font-size: 16px;
+}
+
+.text {
+    -fx-padding: 20px;
+}
