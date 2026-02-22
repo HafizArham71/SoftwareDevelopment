@@ -1,5 +1,3 @@
-package com.example._9_aigamecode.Game;
-
 import java.util.Scanner;
 
 public class InfixToPostfix {
