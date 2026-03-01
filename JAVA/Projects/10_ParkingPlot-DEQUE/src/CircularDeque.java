@@ -85,7 +85,7 @@ public class CircularDeque {
     }
 
     public void displayInfo() {
-        System.out.println("Available Space: " + (capacity-size));
+        System.out.println("Available Space: " + (capacity - size));
         System.out.println("Ocupied Space: " + size);
         System.out.println("Total Space: " + capacity);
 
